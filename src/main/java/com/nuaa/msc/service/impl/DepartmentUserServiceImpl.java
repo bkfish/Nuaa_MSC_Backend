@@ -41,5 +41,11 @@ public class DepartmentUserServiceImpl implements DepartmentUserService {
     public int update(DepartmentUser departmentUser) {
         return departmentUserMapper.update(departmentUser);
     }
+
+    @Override
+    public Object listAllDepartmentUserBydepartmentId(Integer departmentId) {
+        return departmentUserMapper.listAllDepartmentUserBydepartmentId(departmentId);
+    }
+
 }
 

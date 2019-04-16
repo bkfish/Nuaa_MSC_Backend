@@ -30,4 +30,14 @@ public interface DepartmentUserMapper {
             "update department_user set department_id = #{departmentId}, user_id = #{userId},role = #{role}, extension = #{extension   } where id = #{id}"
     })
     int update(DepartmentUser departmentUser);
+
+    @Select({
+            "select * from department_user where department_id=#{department_Id}"
+    })
+    @Results({
+            @Result(column = "department_id",property = "departmentId"),
+            @Result(column = "user_id",property = "userId")
+    })
+    List<DepartmentUser> listAllDepartmentUserBydepartmentId(Integer departmentId);
+
 }

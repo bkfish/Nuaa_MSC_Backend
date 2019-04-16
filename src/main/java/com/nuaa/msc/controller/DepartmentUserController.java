@@ -42,4 +42,10 @@ public class DepartmentUserController {
     public int update(@RequestBody DepartmentUser departmentUser) {
         return departmentUserService.update(departmentUser);
     }
+
+    @ApiOperation(value = "通过部门ID获得本部门下所有人id和职位")
+    @PostMapping("/listAllDepartmentUserBydepartmentId")
+    public Object listAllDepartmentUserBydepartmentId(Integer departmentId) {
+        return departmentUserService.listAllDepartmentUserBydepartmentId(departmentId);
+    }
 }

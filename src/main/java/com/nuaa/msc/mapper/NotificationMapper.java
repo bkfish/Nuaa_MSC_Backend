@@ -35,6 +35,9 @@ public interface NotificationMapper {
     })
     int remove(Integer notificationId);
 
+    @Select("select * from notification where id = #{id}")
+    Notification findNotificationById(Integer id);
+
 
 }
 

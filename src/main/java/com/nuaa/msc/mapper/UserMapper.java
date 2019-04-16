@@ -45,4 +45,7 @@ public interface UserMapper {
     })
     String login(LoginDao loginDao);
 
+    @Select("select * from user where id = #{id}")
+    User findUserById(Integer id);
+
 }

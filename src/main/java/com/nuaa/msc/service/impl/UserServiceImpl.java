@@ -48,6 +48,10 @@ public class UserServiceImpl implements UserService {
         return userMapper.login(loginDao);
     }
 
+    @Override
+    public User findUserById(Integer id) {
+        return userMapper.findUserById(id);
+    }
 
 
 }

@@ -15,5 +15,7 @@ public interface UserService {
     int update(User user);
 
     String login(LoginDao loginDao);
+
+    User findUserById(Integer id);
 }
 

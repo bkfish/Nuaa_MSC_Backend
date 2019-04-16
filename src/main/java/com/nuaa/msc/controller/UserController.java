@@ -49,6 +49,12 @@ public class UserController {
      * @param userId
      * @return
      */
+    @PostMapping("/findUserById")
+    @ApiOperation(value = "根据id获得用户")
+    public User findUserById(Integer userId){
+        return userService.findUserById(userId);
+    }
+
     @DeleteMapping("/removeById")
     @ApiOperation(value = "根据id删除用户")
     public int remove(Integer userId){
@@ -65,6 +71,8 @@ public class UserController {
     public int update(@RequestBody User user){
         return userService.update(user);
     }
+
+
 
 
     /**
