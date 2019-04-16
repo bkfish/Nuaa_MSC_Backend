@@ -3,18 +3,18 @@ package com.nuaa.msc.bean.Dao;
 import lombok.Data;
 
 @Data
-public class insertDepartmentUserDao {
+public class InsertDepartmentUserDao {
     private Integer departmentId;
     private Integer userId;
     private String role;
     private String extension;
-    public insertDepartmentUserDao(){
+    public InsertDepartmentUserDao(){
         this.departmentId=null;
         this.userId=null;
         this.role=null;
         this.extension=null;
     }
-    public insertDepartmentUserDao(Integer departmentId,Integer userId,String role,String extension){
+    public InsertDepartmentUserDao(Integer departmentId, Integer userId, String role, String extension){
         this.departmentId=departmentId;
         this.userId=userId;
         this.role=role;

@@ -3,15 +3,15 @@ package com.nuaa.msc.bean.Dao;
 import lombok.Data;
 
 @Data
-public class insertDepartmentDao {
+public class InsertDepartmentDao {
     private String name;
     private String extension;
-    public insertDepartmentDao(){
+    public InsertDepartmentDao(){
         this.name="";
         this.extension=null;
 
     }
-    public insertDepartmentDao(String name, String extension){
+    public InsertDepartmentDao(String name, String extension){
         this.name=name;
         this.extension=extension;
     }

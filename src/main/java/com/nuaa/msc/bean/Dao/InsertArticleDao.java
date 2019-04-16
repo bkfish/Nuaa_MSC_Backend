@@ -7,7 +7,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.util.Date;
 
 @Data
-public class insertArticleDao {
+public class InsertArticleDao {
     private String title;
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -18,7 +18,7 @@ public class insertArticleDao {
     private String content;
     private String cover;
     private String extension;
-    public insertArticleDao(){
+    public InsertArticleDao(){
         this.title=null;
         this.time=null;
         this.summary=null;
@@ -28,8 +28,8 @@ public class insertArticleDao {
         this.cover=null;
         this.extension=null;
     }
-    public insertArticleDao(String title,Date time,String summary,Integer userId,String auther,String content,
-                   String cover,String extension){
+    public InsertArticleDao(String title, Date time, String summary, Integer userId, String auther, String content,
+                            String cover, String extension){
         this.title=title;
         this.time=time;
         this.summary=summary;

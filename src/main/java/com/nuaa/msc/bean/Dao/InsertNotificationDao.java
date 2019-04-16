@@ -5,7 +5,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
-public class insertNotificationDao {
+public class InsertNotificationDao {
     private String title;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -28,7 +28,7 @@ public class insertNotificationDao {
     private String cover;
     private String participants;
     private String extension;
-    public  insertNotificationDao(){
+    public InsertNotificationDao(){
         this.title=null;
         this.time=null;
         this.endTime=null;
@@ -42,9 +42,9 @@ public class insertNotificationDao {
         this.cover=null;
         this.extension=null;
     };
-    public insertNotificationDao(String title,Date time,
-                         Date startTime,Date endTime,String location,String summary,Integer userId,String auther,String content,String cover,
-                         String participants,String extension){
+    public InsertNotificationDao(String title, Date time,
+                                 Date startTime, Date endTime, String location, String summary, Integer userId, String auther, String content, String cover,
+                                 String participants, String extension){
         this.title=title;
         this.time=time;
         this.endTime=endTime;
