@@ -1,5 +1,8 @@
 package com.nuaa.msc.config;
 
+import com.google.common.base.Predicates;
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.Contact;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -32,7 +35,14 @@ public class SwaggerConfig {
 
     @Bean
     public Docket customDocket() {
-        return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo());
+        return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo())
+                .pathMapping("/")
+                .select() // 选择那些路径和api会生成document
+                .apis(RequestHandlerSelectors.any())// 对所有api进行监控
+                //不显示错误的接口地址
+                .paths(Predicates.not(PathSelectors.regex("/error.*")))//错误路径不监控
+                .paths(PathSelectors.regex("/.*"))// 对根下所有路径进行监控
+                .build();
     }
 
     private ApiInfo apiInfo() {
@@ -44,4 +54,5 @@ public class SwaggerConfig {
                 .version(version)
                 .build();
     }
+
 }
