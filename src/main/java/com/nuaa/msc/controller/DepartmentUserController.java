@@ -25,7 +25,7 @@ public class DepartmentUserController {
         return departmentUserService.listAll(page, size);
     }
 
-    @ApiOperation(value = "时间格式 pattern = \"yyyy-MM-dd HH:mm:ss\"")
+    @ApiOperation(value = "添加部门-人员关系表")
     @PostMapping("/insert")
     public int insert(@RequestBody InsertDepartmentUserDao insertDepartmentUserDao) {
         return departmentUserService.insert(insertDepartmentUserDao);
