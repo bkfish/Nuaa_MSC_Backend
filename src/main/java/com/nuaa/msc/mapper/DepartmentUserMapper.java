@@ -27,7 +27,7 @@ public interface DepartmentUserMapper {
     int remove(Integer departmentUserId);
 
     @Update({
-            "update department_user set department_id = #{departmentId}, user_id = #{userId},role = #{role}, extension = #{extension} where id = #{id}"
+            "update department_user set department_id = #{departmentId}, user_id = #{userId},role = #{role}, extension = #{extension   } where id = #{id}"
     })
     int update(DepartmentUser departmentUser);
 }

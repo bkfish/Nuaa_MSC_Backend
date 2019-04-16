@@ -12,7 +12,7 @@ public interface DepartmentMapper {
     @Select({
             "select * from department"
     })
-    List<Department> listAll(String filter);
+    List<Department> listAll();
 
     @Insert({
             "insert into department(`name`,`extension`)values(#{name},#{extension})"
