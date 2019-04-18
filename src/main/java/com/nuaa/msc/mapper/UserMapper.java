@@ -36,7 +36,7 @@ public interface UserMapper {
 
     @Update({
             "update user set username = #{username},password=#{password}, real_name = #{password},nick_name=#{nickName},home_page=#{homePage}," +
-                    "gender=#{gender},student_num=#{studentNum},extension=#{home_page},birthday=#{birthday} where id = #{id}"
+                    "gender=#{gender},student_num=#{studentNum},extension=#{extension},birthday=#{birthday} where id = #{id}"
     })
     int update(User user);
 
