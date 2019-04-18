@@ -23,7 +23,7 @@ public interface ArticleMapper {
     int insert(InsertArticleDao insertArticleDao);
 
     @Update({
-            "update department set title=#{title},time=#{time},summary=#{summary},user_id=#{userId},auther=#{auther},content=#{content},cover=#{cover},extension=#{extension} where id=#{id} "
+            "update article set title=#{title},time=#{time},summary=#{summary},user_id=#{userId},auther=#{auther},content=#{content},cover=#{cover},extension=#{extension} where id=#{id} "
     })
     int update(Article article);
 
