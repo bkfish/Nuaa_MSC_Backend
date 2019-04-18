@@ -35,8 +35,8 @@ public interface UserMapper {
     int remove(Integer userId);
 
     @Update({
-            "update user set username = #{username},password=#{password}, real_name = #{password},nick_name=#{nickName},home_page=#{homePage}," +
-                    "gender=#{gender},student_num=#{studentNum},extension=#{extension},birthday=#{birthday} where id = #{id}"
+            "update user set username = #{username},password=#{password}, real_name = #{realName},nick_name=#{nickName},home_page=#{homePage}," +
+                    "gender=#{gender},student_num=#{studentNum},extension=#{extension},birthday=#{birthday} where id = #{id} "
     })
     int update(User user);
 
