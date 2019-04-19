@@ -25,6 +25,13 @@ public class DepartmentUserController {
         return departmentUserService.listAll(page, size);
     }
 
+    @GetMapping("/getAllDepartmentUserDao")
+    @ApiOperation(value = "查询全部")
+    public Object getAllDepartmentUserDao(@RequestParam(value = "page", defaultValue = "1") int page,
+                          @RequestParam(value = "size", defaultValue = "10") int size) {
+        return departmentUserService.getAllDepartmentUserDao(page, size);
+    }
+
     @ApiOperation(value = "添加部门-人员关系表")
     @PostMapping("/insert")
     public int insert(@RequestBody InsertDepartmentUserDao insertDepartmentUserDao) {

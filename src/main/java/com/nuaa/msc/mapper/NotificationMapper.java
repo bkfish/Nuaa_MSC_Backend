@@ -26,7 +26,7 @@ public interface NotificationMapper {
     int insert(InsertNotificationDao insertNotificationDao);
 
     @Update({
-            "update department set location=#{location},participants=#{participants},start_time=#{startTime},end_time=#{endTime},title=#{title},time=#{time},summary=#{summary},user_id=#{userId},auther=#{auther},content=#{content},cover=#{cover},extension=#{extension} where id=#{id} "
+            "update notification set location=#{location},participants=#{participants},start_time=#{startTime},end_time=#{endTime},title=#{title},time=#{time},summary=#{summary},user_id=#{userId},auther=#{auther},content=#{content},cover=#{cover},extension=#{extension} where id=#{id} "
     })
     int update(Notification notification);
 

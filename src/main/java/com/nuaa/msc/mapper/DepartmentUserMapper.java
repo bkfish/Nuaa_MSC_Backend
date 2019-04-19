@@ -1,5 +1,6 @@
 package com.nuaa.msc.mapper;
 
+import com.nuaa.msc.bean.Dao.GetAllDepartmentUserDao;
 import com.nuaa.msc.bean.Dao.InsertDepartmentUserDao;
 import com.nuaa.msc.bean.DepartmentUser;
 import org.apache.ibatis.annotations.*;
@@ -16,6 +17,19 @@ public interface DepartmentUserMapper {
             @Result(column = "user_id",property = "userId")
     })
     List<DepartmentUser> listAll();
+
+    @Select({
+            "select r1.id,r1.department_id,r1.user_id,r1.role,d1.name as department_name,u1.real_name from department_user r1 left join department d1 on r1.department_id=d1.id left join user u1 on r1.user_id=u1.id"
+    })
+    @Results({
+            @Result(column = "department_id",property = "departmentId"),
+            @Result(column = "user_id",property = "userId"),
+            @Result(column = "department_name",property = "departmentName"),
+            @Result(column = "real_name",property = "realName")
+    })
+    List<GetAllDepartmentUserDao>getAllDepartmentUser();
+
+
     @Insert({
             "insert into department_user(`department_id`, `user_id`,`role`, `extension`) values(#{departmentId}, #{userId},#{role}, #{extension})"
     })

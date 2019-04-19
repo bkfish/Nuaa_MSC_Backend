@@ -3,11 +3,12 @@ package com.nuaa.msc.service;
 import com.nuaa.msc.bean.Dao.InsertDepartmentUserDao;
 import com.nuaa.msc.bean.DepartmentUser;
 
-import java.util.List;
 
 public interface DepartmentUserService {
 
     Object listAll(int page, int size);
+
+    Object getAllDepartmentUserDao(int page, int size);
 
     int insert(InsertDepartmentUserDao insertDepartmentUserDao);
 
