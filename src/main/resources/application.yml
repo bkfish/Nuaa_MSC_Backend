@@ -1,0 +1,30 @@
+swagger:
+  title: NUAA_MSC
+  version: 1.0.0
+  name: Kitty
+
+
+spring:
+  application:
+    name: mybatis-curdc
+  datasource:
+    url: jdbc:mysql://106.15.177.94:3306/nuaa_msc?characterEncoding=utf8&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: XXXXXXXXXXXXXXXXXX
+    password: XXXXXXXXXXXXXX
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    max-idle: 10
+    max-wait: 10000
+    min-idle: 5
+    initial-size: 5
+
+server:
+  port: 5000
+  address: 0.0.0.0
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    use-generated-keys: true
+    default-statement-timeout: 60
+    default-fetch-size: 100
