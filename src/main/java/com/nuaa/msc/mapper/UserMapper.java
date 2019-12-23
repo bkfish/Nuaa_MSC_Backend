@@ -23,9 +23,9 @@ public interface UserMapper {
 
     @Insert({
             "insert into user(`username`, `real_name`,`nick_name`,`home_page`,`gender`, " +
-                    "`student_num`,`extension`,`password`,`birthday`) values(#{username}, #{realName}," +
+                    "`student_num`,`extension`,`password`,`birthday`,`major`) values(#{username}, #{realName}," +
                     "#{nickName},#{homePage},#{gender}, #{studentNum},#{extension}," +
-                    "#{password},#{birthday})"
+                    "#{password},#{birthday},#{major})"
     })
     int insert(InsertUserDao insertUserDao);
 
@@ -35,7 +35,7 @@ public interface UserMapper {
     int remove(Integer userId);
 
     @Update({
-            "update user set username = #{username},password=#{password}, real_name = #{realName},nick_name=#{nickName},home_page=#{homePage}," +
+            "update user set username = #{username},password=#{password},major=#{major}, real_name = #{realName},nick_name=#{nickName},home_page=#{homePage}," +
                     "gender=#{gender},student_num=#{studentNum},extension=#{extension},birthday=#{birthday} where id = #{id} "
     })
     int update(User user);

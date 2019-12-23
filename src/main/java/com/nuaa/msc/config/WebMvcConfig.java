@@ -12,7 +12,7 @@ class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("*")
+                .allowedOrigins("https://cydd.online","http://admin.nuaamsc.com","http://localhost:4200","http://192.168.1.114:4200","http://192.168.1.140:4200","http://vue.muyun.work","http://localhost:8080","http://msc.creedowl.com;4200","http://localhost","https://localhost")
                 .allowedMethods("*")
                 .allowedHeaders("*")
                 .maxAge(63000)

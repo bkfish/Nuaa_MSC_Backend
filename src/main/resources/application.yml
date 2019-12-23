@@ -8,8 +8,8 @@ spring:
   application:
     name: mybatis-curdc
   datasource:
-    url: jdbc:mysql://106.15.177.94:3306/nuaa_msc?characterEncoding=utf8&useLegacyDatetimeCode=false&serverTimezone=UTC
-    username: kitty
+    url: jdbc:mysql://localhost:3306/nuaa_msc?characterEncoding=utf8&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
     password: liu19990808
     driver-class-name: com.mysql.cj.jdbc.Driver
     max-idle: 10
