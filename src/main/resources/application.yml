@@ -10,7 +10,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/nuaa_msc?characterEncoding=utf8&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
-    password: liu19990808
+    password: XXXXX
     driver-class-name: com.mysql.cj.jdbc.Driver
     max-idle: 10
     max-wait: 10000
